@@ -162,29 +162,31 @@
         }
       }, 200);
 
-      document.body.innerHTML = `
-        <div style="padding:40px;">
-          <h1>YAYYYY 💖💖💖</h1>
-          <p style="font-size:1.2rem;">You just made me the happiest person alive.</p>
-          <p>I love you, cutie pie 🥧❤️</p>
-          <p style="margin-top:30px;">
-            Oye, itna sharmana hai toh video call karo 😉❤️
-          </p>
-        </div>
-      `;
+      setTimeout(() => {
+    document.body.innerHTML = `
+      <div style="padding:40px; text-align:center;">
+        <h1>YAYYYY 💖💖💖</h1>
+        <p style="font-size:1.2rem;">You just made me the happiest person alive.</p>
+        <p>I love you, cutie pie 🥧❤️</p>
+        <p style="margin-top:30px;">
+          Oye, itna sharmana hai toh video call karo 😉❤️
+        </p>
+      </div>
+    `;
 
-      for (let i = 0; i < 30; i++) {
-        const heart = document.createElement("div");
-        heart.innerHTML = "❤️";
-        heart.style.position = "fixed";
-        heart.style.left = Math.random() * 100 + "vw";
-        heart.style.top = "100vh";
-        heart.style.fontSize = "24px";
-        heart.style.animation = "floatUp 4s linear infinite";
-        document.body.appendChild(heart);
-        setTimeout(() => heart.remove(), 4000);
-      }
+    for (let i = 0; i < 30; i++) {
+      const heart = document.createElement("div");
+      heart.innerHTML = "❤️";
+      heart.style.position = "fixed";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.top = "100vh";
+      heart.style.fontSize = "24px";
+      heart.style.animation = "floatUp 4s linear infinite";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 4000);
     }
+  }, 600); // ⬅️ THIS DELAY IS THE KEY
+}
   </script>
 
 </body>
